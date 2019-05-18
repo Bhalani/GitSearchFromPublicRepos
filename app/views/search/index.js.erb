@@ -1,0 +1,5 @@
+$("#loader").addClass("hide");
+$("#search-results").removeClass("hide");
+$("#pagination").removeClass("hide");
+$("#search-results").html("<%= escape_javascript(render partial: 'repository', collection: @repositories.items, as: :repository) %>");
+$("#pagination").html("<%= escape_javascript(render partial: 'pagination', locals: { repositories: @repositories }) %>");

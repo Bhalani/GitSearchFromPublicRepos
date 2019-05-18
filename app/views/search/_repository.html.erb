@@ -1,0 +1,15 @@
+<div class="col-sm-12">
+  <div class="my-2 box px-sm-3 pb-1">
+    <h5 class="mb-2"> <%= link_to repository.full_name, repository.html_url %> </h5>
+    <p class="mb-1"> <%= repository.description %> </p>
+    <p class="mb-1">
+      <span> Updated <%= time_ago_in_words(repository.updated_at) %> ago </span>
+      
+      <% if repository.language %>
+        <span class="ml-5"> Language: <code><%= repository.language %></code> </span>
+      <% end %>
+      
+      <span class="ml-5"> ★ <span class="text-info"><%= repository.watchers %> </span></span>
+    </p>
+  </div>
+</div>

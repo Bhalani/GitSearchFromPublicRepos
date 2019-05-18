@@ -1,0 +1,55 @@
+<div class="page-header" id="banner">
+  <div class="row">
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <div>
+        <input type="text" placeholder="Search Terms" id="search" name="q" class="form-control">
+      </div>
+      <div id="loader" class="hide mx-auto text-center">
+        <%= image_tag("loading.gif", class: "loader_image") %>
+      </div>
+      <div class="row" id="search-results"></div>
+      <div id="pagination"></div>
+    </div>
+    <div class="col-lg-4 col-md-5 col-sm-12">
+      <h5>
+        Help (?):
+      </h5>
+      <h5>
+        Search by repository name, description, or contents of the README file 
+      </h5>
+      <p>
+        With the in qualifier you can restrict your search to the repository name, repository description, contents of the README file, or any combination of these. When you omit this qualifier, only the repository name and description are searched.
+      </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Qualifier</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>in:name</code></td>
+            <td><a href="https://github.com/search?q=jquery+in%3Aname&amp;type=Repositories"><strong>jquery in:name</strong></a> matches repositories with "jquery" in their name.</td>
+          </tr>
+          <tr>
+            <td><code>in:description</code></td>
+            <td><a href="https://github.com/search?q=jquery+in%3Aname%2Cdescription&amp;type=Repositories"><strong>jquery in:name,description</strong></a> matches repositories with "jquery" in their name or description.</td>
+          </tr>
+          <tr>
+            <td><code>in:readme</code></td>
+            <td><a href="https://github.com/search?q=jquery+in%3Areadme&amp;type=Repositories"><strong>jquery in:readme</strong></a> matches repositories mentioning "jquery" in their README file.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5>
+        Ex:
+        <code>rails in:name</code>
+      </h5>
+      <p>
+        Here ★ means count of Watchers.
+      </p>
+    </div>
+  </div>
+</div>
